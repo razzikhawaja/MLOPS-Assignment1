@@ -17,3 +17,4 @@ joblib.dump(model, 'house_price_model.pkl')
 
 predictions = model.predict(X_test)
 print(predictions[:5])  
+
