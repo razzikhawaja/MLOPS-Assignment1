@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+.DS_Store
+*.pkl  # This will ignore the model file, but keep it locally
