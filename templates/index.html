@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="MedInc">Median Income:</label>
+        <input type="text" id="MedInc" name="MedInc" required><br><br>
+        <label for="HouseAge">House Age:</label>
+        <input type="text" id="HouseAge" name="HouseAge" required><br><br>
+        <label for="AveRooms">Average Rooms:</label>
+        <input type="text" id="AveRooms" name="AveRooms" required><br><br>
+        <label for="AveBedrms">Average Bedrooms:</label>
+        <input type="text" id="AveBedrms" name="AveBedrms" required><br><br>
+        <label for="Population">Population:</label>
+        <input type="text" id="Population" name="Population" required><br><br>
+        <label for="AveOccup">Average Occupancy:</label>
+        <input type="text" id="AveOccup" name="AveOccup" required><br><br>
+        <label for="Latitude">Latitude:</label>
+        <input type="text" id="Latitude" name="Latitude" required><br><br>
+        <label for="Longitude">Longitude:</label>
+        <input type="text" id="Longitude" name="Longitude" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction is not none %}
+    <h2>Predicted House Price: ${{ '{:.2f}'.format(prediction * 100000) }}</h2>
+    {% endif %}
+</body>
+</html>
